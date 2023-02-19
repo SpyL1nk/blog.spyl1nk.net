@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on SpyL1nk - Personal blog</title>
+    
+    
+    
+    <link>https://blog.spyl1nk.net/posts/</link>
+    <description>Recent content in Posts on SpyL1nk - Personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-en</language>
+    <lastBuildDate>Sun, 19 Feb 2023 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.spyl1nk.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stormshield Management Center and TOTP (FortiToken)</title>
+      <link>https://blog.spyl1nk.net/posts/stormshield-smc-totp-fortiauthenticator/</link>
+      <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.spyl1nk.net/posts/stormshield-smc-totp-fortiauthenticator/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Introduction Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&amp;rsquo;ll certainly talk a lot about.
+For a recent project with a customer, we had to deploy a Stormshield Management Center, aka SMC, which is used to manage and deploy configuration on the firewalls. The product may be a little bit new on the market (only few years) and of course may lack of some capabilities compared to other big player on the market.
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>

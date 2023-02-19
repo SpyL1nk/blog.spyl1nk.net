@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>NSE8 - Start of a journey :: SpyL1nk - Personal blog — Cybersecurity, networking and infrastructure blog</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Since I passed the NSE7 Enterprise Firewall this June, I had to fix myself a new objective for the incoming year. Given that I work mainly with Fortinet products, the choice of NSE8 was pretty obvious. As of today I know I don&amp;rsquo;t have the knowledge and skills needed to obtain this certification so some planning must be done to close the gap!
+First thing to notice, there is only few documentation or feedback from people who passed this certification, even on the Fortinet Reddit&amp;rsquo;s page &amp;hellip; The only reliable information can be found in the handbook from the NSE Institute."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://localhost/posts/nse8-preparation/" />
+
+
+
+
+
+<link rel="stylesheet" href="http://localhost/assets/style.css">
+
+
+<link rel="stylesheet" href="http://localhost/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="http://localhost/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NSE8 - Start of a journey"/>
+<meta name="twitter:description" content="Since I passed the NSE7 Enterprise Firewall this June, I had to fix myself a new objective for the incoming year. Given that I work mainly with Fortinet products, the choice of NSE8 was pretty obvious. As of today I know I don&rsquo;t have the knowledge and skills needed to obtain this certification so some planning must be done to close the gap!
+First thing to notice, there is only few documentation or feedback from people who passed this certification, even on the Fortinet Reddit&rsquo;s page &hellip; The only reliable information can be found in the handbook from the NSE Institute."/>
+
+
+
+<meta property="og:title" content="NSE8 - Start of a journey" />
+<meta property="og:description" content="Since I passed the NSE7 Enterprise Firewall this June, I had to fix myself a new objective for the incoming year. Given that I work mainly with Fortinet products, the choice of NSE8 was pretty obvious. As of today I know I don&rsquo;t have the knowledge and skills needed to obtain this certification so some planning must be done to close the gap!
+First thing to notice, there is only few documentation or feedback from people who passed this certification, even on the Fortinet Reddit&rsquo;s page &hellip; The only reliable information can be found in the handbook from the NSE Institute." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost/posts/nse8-preparation/" />
+<meta property="article:published_time" content="2020-07-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-10T00:00:00+00:00" /><meta property="og:site_name" content="SpyL1nk - Personal blog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">get sys status</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+        
+          <li><a href="/reads">Reads</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+      
+        <li><a href="/reads">Reads</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title"><a href="http://localhost/posts/nse8-preparation/">NSE8 - Start of a journey</a></h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-07-10
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+        <span class="post-read-time">— 12 min read</span>
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+      <p>Since I passed the NSE7 Enterprise Firewall this June, I had to fix myself a new objective for the incoming year. Given that I work mainly with Fortinet products, the choice of NSE8 was pretty obvious.
+As of today I know I don&rsquo;t have the knowledge and skills needed to obtain this certification so some planning must be done to close the gap!</p>
+<p>First thing to notice, there is only few documentation or feedback from people who passed this certification, even on the Fortinet Reddit&rsquo;s page &hellip;
+The only reliable information can be found in the <a href="https://www.fortinet.com/content/dam/fortinet/assets/training/NSE_8_Certification_Public_Handbook.pdf">handbook</a> from the NSE Institute.</p>
+<p>As every respected expert certification level, two exams need to be completed:</p>
+<ul>
+<li>Written exam: 60 questions (QCM), 120min;</li>
+<li>Practical exam: 2 days hands-on lab (9h on day 1 and 6h on day 2);</li>
+</ul>
+<p>Since I&rsquo;m working as an network &amp; security engineer, most of the configuration and troubleshooting don&rsquo;t scare me. I&rsquo;m exposed to various network topologies, versions, products and of course problems that need to be troubleshooted. I&rsquo;m more concerned about the corner cases and some deep dive knowledge. I also need to discover some products like FortiADC, FortiWeb, FortiSIEM, etc. that are covered in the certification.</p>
+<p>Thanks to my current employer, I have access to the NSE Institute and therefore can access to most of the online formation which covers all the needs for certifications from NSE1 to NSE7.
+This will help me to understand most of the subjects, at a high level most of the time, and I will have to deep dive using the documentation from CLI references, cookbooks, Fortinet KB, etc.
+But I&rsquo;m pretty sure external documentation will be used (FortiGuru, Fortinet subreddit, etc.).</p>
+<p>For the first step, the handbook gives us the list of topics that may be tackled during the written lab. We will try to analyze them in order to understand what do we need to learn.</p>
+<ul>
+<li>
+<ol>
+<li><strong>Security Architectures</strong></li>
+</ol>
+<ul>
+<li>a) <strong>Fortinet cloud security solutions</strong> : <em>Most of the topics are discussed in the NSE3 &amp; NSE7 Cloud formation</em>;
+<ul>
+<li>i) <strong>FortiGate VM models and licensing</strong> : <em>The NSE3 FortiGate Cloud and NSE3 Public Cloud should help on this point</em>;</li>
+<li>ii) <strong>FortiGate VM deployments</strong> : <em>Multiple guides are available to deploy VM and work with them on VMware, KVM or even Hyper-v. Some specificity must be studied</em>;</li>
+<li>iii) <strong>Fortinet on private clouds</strong> : <em>This point is covered on the NSE7 Private Cloud formation. Two topics will be tackled : NSX-T and OpenStack integration</em>;</li>
+<li>iv) <strong>Fortinet on public clouds</strong> : <em>NSE7 Public Cloud formation must cover most of our needs here. AWS, Azure and GCP should be concerned</em>;</li>
+</ul>
+</li>
+<li>b) <strong>Designing resilient solutions</strong> : <em>Resiliency is of course a big subject. This subject is covered in NSE4 and NSE7 formation but a deep dive must be done using cookbooks and KB</em>;
+<ul>
+<li>i) <strong>Fortinet solutions advanced high availability features</strong> : <em>Session synchronization, configuration synchronization and failover should be explored here</em>;</li>
+<li>ii) <strong>Fortinet solutions operation and deployment modes</strong></li>
+<li>iii) <strong>FortiGate Cluster protocol</strong> : <em>Deep dive in the FGCP protocol, A-P and A-A cluster should have no secret</em>;</li>
+<li>iv) <strong>FortiGate Session Life Support protocol</strong> : <em>Deep dive in the FGSP protocol</em>;</li>
+<li>v) <strong>Session-aware load balancing clustering</strong> : <em>Discovering and understanding the SLBC. Documentation may be hard to find and labs will not be possible since this deployment concerns chassis</em>;</li>
+<li>vi) <strong>Load balancing</strong> : <em>This point must cover active-active cluster load balancing and external load balancing (FortiADC ?)</em>;</li>
+<li>vii) <strong>Fault tolerance</strong> : <em>I&rsquo;m not sure what is exactly expected from this point since most of the subject should be covered by the previous topics</em>;</li>
+</ul>
+</li>
+<li>c) <strong>Designing enhanced Fortinet solutions</strong>
+<ul>
+<li>i) <strong>Fortinet solutions for specific scenarios</strong>
+<ul>
+<li>(1) <strong>Secure access networks</strong> : <em>FortiWiFi and FortiSwitch are covered here. Multiple formation are available from NSE6 WLC/Integrated and Cloud Wireless to NSE7 Secure Access. I may include FortiNAC in this topic</em>;</li>
+<li>(2) <strong>Web application security</strong> : <em>Deep dive in the WAF profiles of the FortiGate. The FortiWeb will be covered later</em>;</li>
+<li>(3) <strong>Advanced threat protection</strong> :  <em>This is more a general topic than a technical one. This subject is covered in the NSE7 ATP formation</em>;</li>
+<li>(4) <strong>Cloud security</strong> : <em>Another nebulous topic. FortiGate VM on cloud and other private/public cloud are already covered. Some other products (FortiWeb/FortiMail, etc.) are also covered later. Some newer products like FortiCASB and FortiCWP may be concerned here</em>;</li>
+<li>(5) <strong>Enterprise firewall</strong> : <em>The topics tackled in the NSE7 Enterprise Firewall formation are all covered in more specific point</em>;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>d) <strong>Fortinet high-end solutions</strong> : <em>We need to understand how these chassis work and the lack of public documentation will not help. Moreover, I will not be able to get my hands on these models since none of our clients have the needs for this kind of products</em>;
+<ul>
+<li>i) <strong>FortiGate 3000 Series</strong></li>
+<li>ii) <strong>FortiGate 5000 Series</strong></li>
+<li>iii) <strong>FortiGate 7000 Series</strong> : <em>This topic is covered by a formation on the NSE Institute</em>;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ol start="2">
+<li><strong>Hardware acceleration</strong> : <em>One of the major asset of Fortinet products is the chips they use to handle most of the traffic and security inspection. It is mandatory to understand well how they work</em>;</li>
+</ol>
+<ul>
+<li>a) <strong>Hardware acceleration overview</strong>
+<ul>
+<li>i) <strong>Content processors</strong> : <em>Content Processors are responsible for processing some CPU intensive security related process</em>;</li>
+<li>ii) <strong>Security processors</strong> : <em>Security Processors can be used to accelerate some security specialized process</em>;</li>
+<li>iii) <strong>Network processors</strong> : <em>Network Processors work mainly to offload network processing tasks from the CPU</em>;</li>
+<li>iv) <strong>FortiGate blades</strong> : <em>This topic should cover how FortiGate blades share resources and how Hardware acceleration is available between multiple blades</em>;</li>
+<li>v) <strong>FortiGate chassis</strong></li>
+</ul>
+</li>
+<li>b) <strong>Traffic in Fortinet products</strong> : <em>The following topics cover the way Fortinet products handle packets, how they offload them to CP, SP or NP, how the Parallel Path Processing works, etc.</em>;
+<ul>
+<li>i) <strong>Traffic offloading</strong></li>
+<li>ii) <strong>Life of a packet</strong></li>
+<li>ii) <strong>Fortinet communication ports and protocols</strong> : <em>This topics should allow us to learn what are the port and protocols used by the Fortinet products to works with other Fortinet products or with 3rd party products</em>;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ol start="3">
+<li><strong>Networking</strong></li>
+</ol>
+<ul>
+<li>a) <strong>Advanced routing</strong> : <em>Routing is of course one of the main functionality of FortiGate and should be studied well</em>;
+<ul>
+<li>i) <strong>Static routing</strong></li>
+<li>ii) <strong>Dynamic routing</strong> : <em>e/iBGP, OSPF, IS-IS &amp; RIP usage on the FortiGate must be studied</em>;</li>
+<li>iii) <strong>Routing and high availability</strong> : <em>Concepts regarding routing operation on HA must be explained, such as how standby unit handle routing table, how BGP peering or OSPF adjacencies are maintained, etc.</em>;</li>
+<li>iv) <strong>Asymmetric routing</strong> : <em>In some case, it can be needed to allow FortiGate to do asymmetric routing and we have to understand the underlying concepts</em>;</li>
+<li>v) <strong>Secure SD-WAN</strong> : <em>FortiGate integrates some SD-WAN capabilities. I&rsquo;ll explore what we can do with this either for remote branches interconnection or for a dynamic Internet access</em>;</li>
+</ul>
+</li>
+<li>b) <strong>Advanced NAT</strong> : <em>Since FortiGate mostly act as a L3/L4 equipment, they can NAT traffic</em>;
+<ul>
+<li>i) <strong>Central NAT</strong> : <em>It is possible to configure NAT using firewall policies or by creating NAT policies. I&rsquo;ll try to cover differences between these modes</em>;</li>
+<li>ii) <strong>NAT64</strong> : <em>This point should cover how FortiGate handle NAT from IPv6 to IPv4. This is used with DNS64</em>;</li>
+<li>iii) <strong>NAT46</strong> : <em>FortiGate can also handle NATing traffic from IPv4 to IPv4</em>;</li>
+<li>iv) <strong>DNS64</strong>: <em>Used with NAT64, it allows IPv6-only capable clients to access IPv4-only services using DNS modification</em>;</li>
+</ul>
+</li>
+<li>c) <strong>VPN technologies</strong>
+<ul>
+<li>i) <strong>Advanced IPsec</strong> : <em>This topic must cover some advanced IPsec concept such as ADVPN, OCVPN, aggregate/redundant, etc.</em>;</li>
+<li>ii) <strong>Advanced SSL</strong> : <em>FortiGate allows administrators to configure things like SSL-VPN realm, RADIUS authentication, MFA/2FA, etc.</em>;</li>
+</ul>
+</li>
+<li>d) <strong>Network troubleshooting</strong>
+<ul>
+<li>i) <strong>Debugging tools</strong> : <em>FortiOS includes debugging tools used to capture/sniff traffic which we will try to understand</em>;</li>
+<li>ii) <strong>Diagnostic tools</strong></li>
+<li>iii) <strong>Routing and VPN troubleshooting</strong> : <em>We need to understand how to troubleshoot problems concerning routing (static, dynamic, PBR or even SD-WAN) and VPN (IPsec or SSL)</em>;</li>
+<li>iv) <strong>CLI in Fortinet solutions</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ol start="4">
+<li><strong>Authentication</strong></li>
+</ol>
+<ul>
+<li>a) <strong>Authentication with Fortinet products</strong>
+<ul>
+<li>i) <strong>Advanced single sign-on</strong> : <em>FortiGate support some SSO capabilities that allows to filter traffic based on users/groups instead of IP addresses</em>;</li>
+<li>ii) <strong>RADIUS</strong> : <em>It is possible to use RADIUS as authentication source for multiple purposes (SSL-VPN, Administrators, RSSO, etc.)</em>;</li>
+<li>iii) <strong>Two-factor authentication</strong> : <em>It is possible to support 2FA/MFA with FortiTokens, hardware or software, directly on the FortiGate</em>;</li>
+<li>iv) <strong>802.1x</strong> : <em>When FortiGate manage FortiSwitch it is possible to configure 802.1x profiles and apply them on the switches ports</em>;</li>
+<li>v) <strong>Certificate-based authentication</strong> : <em>Even if username/password authentication is mainly used, it is also possible to use certificates to authenticate users and administrators</em>;</li>
+<li>vi) <strong>Troubleshooting</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ol start="5">
+<li><strong>Content inspection</strong> : <em>Of course, as a NGFW, FortiGate can inspect traffic so we have to understand what traffic can be inspected and how it works</em>;</li>
+</ol>
+<ul>
+<li>a) <strong>Inspection modes</strong>
+<ul>
+<li>i) <strong>SSL/SSH</strong> : <em>It is possible to perform a MitM and analyze SSL/TLS or SSH traffic. We have to understand how this works, what are the limitation and how to deploy it</em>;</li>
+<li>ii) <strong>Certificate</strong> : <em>When TLS interception is not possible, it is possible to just analyze certificates</em>;</li>
+<li>iii) <strong>Sandbox inspection</strong> : <em>For some protocols it is possible to send intercepted files to a Sandbox to analyze them</em>;</li>
+</ul>
+</li>
+<li>b) <strong>FortiOS security profiles</strong>
+<ul>
+<li>i) <strong>Antivirus</strong> : <em>Files and documents intercepted on supported protocols can be analyzed. We have to understand what can be analyzed &amp; how works the AV engine</em>;</li>
+<li>ii) <strong>Intrusion prevention systems (IPS)</strong> : <em>Traffic can be analyzed to detect known malicious signatures</em>;</li>
+<li>iii) <strong>Application control</strong> : <em>Analyzing L7, FortiGate can apply fine grained policies to filter applications either web based or not</em>;</li>
+<li>iv) <strong>Web filtering</strong> : <em>In order to allow user to access web resources but with some security enforcements, this functionality will filter websites based on their reputation or their category</em>;</li>
+<li>v) <strong>DNS filtering</strong> : <em>Similar to the web filtering, this will take place at the DNS level, before any HTTP/S request</em>;</li>
+<li>vi) <strong>VoIP inspection</strong> : <em>FortiGate can analyze SIP sessions and apply action based on some criteria</em>;</li>
+<li>vii) <strong>Session helpers</strong> : <em>FortiGate can also analyze other protocols in order to provide some help establishing connection (FTP data channel is a good example)</em>;</li>
+</ul>
+</li>
+<li>c) <strong>FortiGuard services</strong></li>
+</ul>
+</li>
+<li>
+<ol start="6">
+<li><strong>Security operations</strong></li>
+</ol>
+<ul>
+<li>a) <strong>Fortinet solutions APIs</strong>
+<ul>
+<li>i) <strong>Rest API</strong> : <em>Some, if not most, Fortinet products come with a REST API we will try to explore and use some tools to help us is this task</em>;</li>
+</ul>
+</li>
+<li>b) <strong>Handling security events with Fortinet solutions</strong>
+<ul>
+<li>i) <strong>FortiSIEM</strong> : <em>As stated in its name, FortiSIEM is a Security Information &amp; Event Management. We will try to understand how it works and how we can integrate it in the Fortinet ecosystem and with 3rd party devices</em>;</li>
+<li>ii) <strong>FortiAnalyzer</strong> : <em>Preconized solution to collect logs from Fortinet products, it has an easy integration and provides key in hand dashboard, reports and alerting</em>;</li>
+<li>iii) <strong>Log analysis</strong> : <em>FortiGate and other Fortinet product generate many logs and it is important to understand what they mean and where we can find interesting information</em>;</li>
+<li>iv) <strong>Event management</strong></li>
+</ul>
+</li>
+<li>c) <strong>Fortinet central management solutions</strong>
+<ul>
+<li>i) <strong>FortiManager</strong> : <em>When many FortiGate need to be managed, FortiManager will help to configure them, provision them, update them, etc.</em>;</li>
+<li>ii) <strong>FortiCloud</strong> : <em>FortiCloud consist of multiple online (SaaS) tools that helps network administrator to manage their Fortinet&rsquo;s products. FortiCloud also provides some free tools for security or log management</em>;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ol start="7">
+<li><strong>Integrated Solutions</strong> : <em>Fortinet offer the possibility to integrate a full ecosystem of products that can interact. It is the case for the FortiAP (WiFi Access Point) and FortiSwitch (Switches) but other products also help for security purposes</em>;</li>
+</ol>
+<ul>
+<li>a) <strong>Integrate Fortinet solutions for advanced threat protection</strong> : <em>When security is a biggest concern, it is possible to include external product, either On-Premise or SaaS, to prevent, detect or mitigate threat. FortiSandbox is the main example but other products can be interconnected with the Fortinet&rsquo;s Security Fabric</em>;</li>
+<li>b) <strong>FortiLink</strong> : <em>Main component of the FortiSwitch architecture, FortiLink is used to manage FortiSwitches and serves as an uplink for the FortiSwitches</em>;</li>
+<li>c) <strong>Fortinet wireless solutions</strong> : <em>Fortinet provides the ability to deploy either FortiAP or FortiWifi. The first ones are classic WiFi Access Point that are controlled by a FortiGate. The second ones are classic FortiGate with an internal WiFi Access Point</em>;</li>
+<li>d) <strong>Fortinet authentication solutions</strong> : <em>FortiAuthenticator &amp; FortiToken, either Cloud or not, are solutions available to manage identity and authentication for the Fortinet products and, of course, for 3rd party products</em>;</li>
+<li>e) <strong>Fortinet hybrid solutions (traditional network and cloud)</strong></li>
+</ul>
+</li>
+<li>
+<ol start="8">
+<li><strong>Enhanced Technologies</strong></li>
+</ol>
+<ul>
+<li>a) <strong>Fortinet enhanced solutions including</strong>
+<ul>
+<li>i) <strong>FortiWeb</strong> : <em>Web Application Firewall solution, Firewall helps to protect web applications and API against threat actors</em>;</li>
+<li>ii) <strong>FortiADC</strong> : <em>As an Application Delivery Controller, FortiADC helps to publish application, protect them, make them resilient</em>;</li>
+<li>iii) <strong>FortiDDoS</strong> : *FortiDDoS will protect network against Distributed Denial of Service analyzing traffic from layer 3 to layer 7, using behavior analysis, known threat source, etc. *</li>
+<li>iv) <strong>FortiAuthenticator</strong> : <em>Identity and authentication source, FortiAuthenticator can aggregate multiple identity source, force MFA/2FA usage</em>;</li>
+<li>v) <strong>FortiMail</strong> : <em>Since emails are one of the major compromise source, they need to be analyzed, filtered and sanitized. FortiMail helps to achieve this</em>;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Actually Firmware version used for the NSE8 exams are the following :</p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Base Firmware</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FortiGate</td>
+<td>6.2.x +</td>
+</tr>
+<tr>
+<td>FortiAnalyzer</td>
+<td>6.2.x +</td>
+</tr>
+<tr>
+<td>FortiAuthenticator</td>
+<td>6.0.x +</td>
+</tr>
+<tr>
+<td>FortiManager</td>
+<td>6.2.x +</td>
+</tr>
+<tr>
+<td>FortiSandbox</td>
+<td>3.1.x</td>
+</tr>
+<tr>
+<td>FortiADC</td>
+<td>5.4.x +</td>
+</tr>
+<tr>
+<td>FortiWeb</td>
+<td>6.3.x +</td>
+</tr>
+<tr>
+<td>FortiMail</td>
+<td>6.2.x +</td>
+</tr>
+<tr>
+<td>FortiDDoS</td>
+<td>5.3.x +</td>
+</tr>
+<tr>
+<td>FortiAP</td>
+<td>6.2.x +</td>
+</tr>
+<tr>
+<td>FortiSwitch</td>
+<td>6.2.x +</td>
+</tr>
+<tr>
+<td>FortiSIEM</td>
+<td>5.2.x +</td>
+</tr>
+<tr>
+<td>FortiClient</td>
+<td>6.2.x +</td>
+</tr>
+</tbody>
+</table>
+<p>Since I work daily with Fortinet products, I may also cover newer version and maybe compare or comment some changes in the behavior of some functionalities between version.</p>
+<p>NSE8 covers a lot of security aspects, that is why I&rsquo;ll also keep some time to read other security information related papers and listen to my favorites security podcast while driving.</p>
+<p>As you can see there are many topics to cover on many protocols, technologies and products. To help me, I&rsquo;ll try to make some flashcards, mainly on topics I don&rsquo;t know yet and I&rsquo;ll try to share them.</p>
+<p>I don&rsquo;t feel I can have a fixed study planning since I move very often at the premises of customers for whom I work. So it can happens that I&rsquo;m not at home for a week or more and it&rsquo;s hard to predict how long my days can be.
+Anyway I&rsquo;ll try to keep a steady pace most of the time this means :</p>
+<ul>
+<li>At least one 1h every day to learn something new, either reading documentation, watching a product presentation, reading blogs, etc.;</li>
+<li>At least 1/2h of revision with my flashcard or writing some part of a blogpost every two day;</li>
+<li>At least 4h of lab every week-end either Saturday or Sunday depending of my personal planning;</li>
+</ul>
+<p>My actual objective is to pass the written exam in 2021, between April and May and the practice lab this summer.</p>
+
+    </div>
+    
+      
+    
+
+
+    
+      
+        
+
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">get sys status</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="http://localhost/assets/main.js"></script>
+<script src="http://localhost/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
