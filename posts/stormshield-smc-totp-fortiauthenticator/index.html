@@ -6,7 +6,7 @@
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Introduction Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&amp;rsquo;ll certainly talk a lot about.
+<meta name="description" content="Introduction Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&amp;rsquo;ll certainly talk a lot about in my posts.
 For a recent project with a customer, we had to deploy a Stormshield Management Center, aka SMC, which is used to manage and deploy configuration on the firewalls. The product may be a little bit new on the market (only a few years) and of course, may lack some capabilities compared to other big players in the market."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
@@ -28,13 +28,13 @@ For a recent project with a customer, we had to deploy a Stormshield Management 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Stormshield Management Center and TOTP (FortiToken)"/>
-<meta name="twitter:description" content="Introduction Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&rsquo;ll certainly talk a lot about.
+<meta name="twitter:description" content="Introduction Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&rsquo;ll certainly talk a lot about in my posts.
 For a recent project with a customer, we had to deploy a Stormshield Management Center, aka SMC, which is used to manage and deploy configuration on the firewalls. The product may be a little bit new on the market (only a few years) and of course, may lack some capabilities compared to other big players in the market."/>
 
 
 
 <meta property="og:title" content="Stormshield Management Center and TOTP (FortiToken)" />
-<meta property="og:description" content="Introduction Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&rsquo;ll certainly talk a lot about.
+<meta property="og:description" content="Introduction Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&rsquo;ll certainly talk a lot about in my posts.
 For a recent project with a customer, we had to deploy a Stormshield Management Center, aka SMC, which is used to manage and deploy configuration on the firewalls. The product may be a little bit new on the market (only a few years) and of course, may lack some capabilities compared to other big players in the market." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.spyl1nk.net/posts/stormshield-smc-totp-fortiauthenticator/" /><meta property="article:section" content="posts" />
@@ -168,13 +168,13 @@ For a recent project with a customer, we had to deploy a Stormshield Management 
 </nav></aside>
       
       <h2 id="introduction">Introduction</h2>
-<p>Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&rsquo;ll certainly talk a lot about.</p>
+<p>Among the manufacturer I work the most with, we can find Stormshield, a European network security manufacturer which I&rsquo;ll certainly talk a lot about in my posts.</p>
 <p>For a recent project with a customer, we had to deploy a Stormshield Management Center, aka SMC, which is used to manage and deploy configuration on the firewalls.
 The product may be a little bit new on the market (only a few years) and of course, may lack some capabilities compared to other big players in the market.</p>
-<p>In my case, something was missing, or at least I thought, the support of 2FA/MFA capabilities. Even if this <a href="https://documentation.stormshield.eu/SNS/v4/en/Content/User_Configuration_Manual_SNS_v4/Authentication/Available_methods_tab_-_TOTP.htm">has been announced</a> for the firewalls, Stormshield Network Security, aka SNS, on their latest version, the SMC is not, yet, included.</p>
+<p>In my case, something was missing, or at least I thought, the support of 2FA/MFA capabilities. Even if this <a href="https://documentation.stormshield.eu/SNS/v4/en/Content/User_Configuration_Manual_SNS_v4/Authentication/Available_methods_tab_-_TOTP.htm">has been announced</a> for the firewalls, Stormshield Network Security, aka SNS, on their latest version, the SMC does not, yet, support TOTP.</p>
 <h2 id="the-context">The context</h2>
-<p>Quick context, we have a SMC to which multiple administrators should connect to administer the firewalls. The previous centralized console allowed to connect using only a username (dedicated to management) and a TOTP generated through the FortiToken Mobile application (it could also be a hardware FortiToken). No &ldquo;classic&rdquo; passwords were involved.</p>
-<p>On the other side, FortiTokens are managed by a FortiAuthenticator and users are pulled from an Active Directory.</p>
+<p>Quick context, we have an SMC to which multiple administrators should connect to administer the policies and firewalls. The previous centralized console allowed to connect using only a username (dedicated to management) and a TOTP generated through the FortiToken Mobile application (it could also be a hardware FortiToken). No &ldquo;classic&rdquo; passwords were involved.</p>
+<p>On the other side, FortiTokens are managed by a FortiAuthenticator and users are pulled from an Active Directory with sync rules.</p>
 <p>The central console and the FortiAuthenticator communicate using RADIUS protocol which allows support to 2FA/MFA, usually using Access-Challenge requests. Since we only use TOTP as the password this won&rsquo;t be necessary and the central console doesn&rsquo;t have to support it.
 We could also use the &ldquo;concatenation&rdquo; method by appending the TOTP to the password. This method, also supported by the FortiAuthenticator, could be used.</p>
 <p>When we naively try to replicate the configuration on the SMC we get an error &ldquo;The authentication failed&rdquo;.</p>
@@ -184,9 +184,9 @@ We could also use the &ldquo;concatenation&rdquo; method by appending the TOTP t
 <li>The first log shows a successful authentication with the FortiToken;</li>
 <li>The second log shows an authentication failure because of the reuse of the previous token;</li>
 </ul>
-<p>![FAC Authentication Error]At this point, I remembered a discussion I had with the customer who told me I can use the token only one time (per minute for the default FortiToken configuration) even with connections to multiple administrative interfaces.
+<p>![FAC Authentication Error]At this point, I remembered a discussion I had with the customer who told me they can use the token only one times (per minute for the default FortiToken configuration) even with connections to multiple administrative interfaces.
 This is smart since this makes the TOTP truly one-time and help prevent replay attack on a compromised network. This is not perfect but it adds another layer of protection.</p>
-<p>So our issue might be there, but why is the SMC sending multiple requests to the FortiAuthenticator?</p>
+<p>So our issue might be there, but then, why is the SMC sending multiple requests to the FortiAuthenticator?</p>
 <h2 id="analysis">Analysis</h2>
 <p>The quickest way to start understanding what is happening is first to sniff some traffic. The SMC allows us to use <code>tcpdump</code> which is easier.</p>
 <pre tabindex="0"><code>[root@smc] - {~} &gt; tcpdump -ni eth0 -vvvvvvv host 10.200.1.6
@@ -221,7 +221,10 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
 19:45:39.244513 IP (tos 0x0, ttl 64, id 47466, offset 0, flags [none], proto UDP (17), length 48)
     10.200.1.6.1812 &gt; 10.200.1.96.59994: [udp sum ok] RADIUS, length: 20
         Access-Reject (3), id: 0xa0, Authenticator: ad3876b01a6d3f36530ad01da7b6b577
-</code></pre><p>The network dump clearly shows we have two distinct RADIUS requests :</p>
+</code></pre><blockquote>
+<p>10.200.1.6 is my FortiAuthenticator and 10.200.1.96 is my SMC</p>
+</blockquote>
+<p>The network dump clearly shows we have two distinct RADIUS requests :</p>
 <ul>
 <li>The first request only shows two attributes: the username and the user password. The FortiAuthenticator replies to it with an <code>Access-Accept</code> RADIUS response which matches what we saw in the logs;</li>
 <li>The second request now shows more attributes of the NAS itself. Since the password is, supposedly, the same, the FortiAuthenticator rejects the authentication, the <code>Access-Reject</code> response, as part of the anti-replay feature. This, again, match what is in the logs;</li>
@@ -231,9 +234,9 @@ It appears impossible to disable the anti-replay feature on the FortiAuthenticat
 <h2 id="bypass">Bypass</h2>
 <p>After a little bit of digging and poking around, I eventually found a way to get it working.
 Our main issue is that the TOTP is used twice on the FortiAuthenticator side. But is possible to filter the request so only the second one is evaluated by the FortiAuthenticator? We cannot filter the RADIUS request dynamically but we can use RADIUS attribute filtering since both requests don&rsquo;t have the same attributes.</p>
-<p>The first one only contains the username and user password while the second one contains NAS attributes. In my case, I&rsquo;m using the <code>NAS-Identifier</code>.</p>
+<p>The first one only contains the username and user password while the second one contains NAS attributes. In my case, I&rsquo;m using the <code>NAS-Identifier</code> to filter the RADIUS requests.</p>
 <p><img src="/img/fac_radius_attr_filter.png" alt="FAC RADIUS Attributes filter"></p>
-<p>So now we have two RADIUS policies, one matching any REQUEST from the SMC and the other matching only the second one.
+<p>So now we have two RADIUS policies, one matching any request from the SMC and the other matching only the second one.
 The trick is to configure the policy for the second request to use OTP-Only (or all configured password and OTP factors if you plan to use the password &amp; OTP concatenation method) while the RADIUS policy for the first request uses &ldquo;Password-only&rdquo; authentication factors.</p>
 <p><img src="/img/fac_radius_auth_factor.png" alt="FAC RADIUS Authentication factors"></p>
 <p>We then need to place the policy for the second request above the other policy, used for the first request. This way :</p>
